@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/modal.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav__container">
+            <h1 class="logo">ShopifyStore</h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#">Home</a></li>
+                    <li class="nav__item"><a href="#">Shop</a></li>
+                    <li class="nav__item"><a href="#">Collections</a></li>
+                    <li class="nav__item"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart__icon">🛒</div>
+        </div>
+    </header>
+    <main class="product__page">
+        <div class="product__grid">
+            <section class="product__gallery">
+                <div class="main__img__container">
+                    <img class="main__img" src="./assets/img4.avif" alt="Product Image">
+                </div>
+
+                <div class="thumbnails">
+                    <img src="./assets/img1.avif" alt="Thumbnail 1" class="thumbnail">
+                    <img src="./assets/img2.avif" alt="Thumbnail 2" class="thumbnail">
+                    <img src="./assets/img3.avif" alt="Thumbnail 3" class="thumbnail">
+                    <img src="./assets/img4.avif" alt="Thumbnail 4" class="thumbnail">
+                    <img src="./assets/img5.avif" alt="Thumbnail 5" class="thumbnail">
+                    <img src="./assets/img6.webp" alt="Thumbnail 6" class="thumbnail">
+                    <img src="./assets/img7.webp" alt="Thumbnail 7" class="thumbnail">
+                    <img src="./assets/img8.webp" alt="Thumbnail 8" class="thumbnail">
+                    <img src="./assets/img9.webp" alt="thumbnail 9" class="thumbnail">
+                    <img src="./assets/img10.webp" alt="shoes" class="thumbnail">
+                    <img src="./assets/basketball shoes.webp" alt="basketball shoes" class="thumbnail">
+                    <img src="./assets/casual sneakers.avif" alt="casual sneakers" class="thumbnail">
+                    <img src="./assets/trail shoes.jpg" alt="trail shoes" class="thumbnail">
+                </div>
+
+                <button class="scroll__btn scroll__left">&#10094;</button>
+                <button class="scroll__btn scroll__right">&#10095;</button>
+            </section>
+            <!-- Product Details Section -->
+            <section class="product__details">
+                <h1 class="product__title">Premium Running Sneakers</h1>
+                <div class="product__price">
+                    <span class="current__price">$129.99</span>
+                    <span class="original__price">$159.99</span>
+                    <span class="product__discount">Save 20%</span>
+                </div>
+                <div class="product__rating">
+                    <span class="stars">★★★★☆</span>
+                    <span class="rating__count">(42 reviews)</span>
+                </div>
+                <p class="product__description">
+                    Our premium running sneakers combine style and performance with breathable mesh, cushioned soles,
+                    and durable rubber outsoles. Perfect for both casual wear and intense workouts.
+                </p>
+
+                <!-- Color Variants -->
+                <div >
+                    <h3 class="variant__title">Color: <span id="selected-color" class="selected-variant">Black</span>
+                    </h3>
+                    <div class="colors">
+                        <button class="color black active" data-color="Black"
+                            data-image="assets/images/product-1.jpg"></button>
+                        <button class="color white" data-color="White"
+                            data-image="assets/images/product-2.jpg"></button>
+                        <button class="color blue" data-color="Blue" data-image="assets/images/product-3.jpg"></button>
+                        <button class="color red" data-color="Red" data-image="assets/images/product-4.jpg"></button>
+                    </div>
+                    <button id="compare__colors__btn" class="compare__colors__btn">Compare Colors</button>
+                </div>
+
+                <!-- Size Variants -->
+                <div>
+                    <div class="size__header">
+                        <h3 class="variant__title">Size</h3>
+                        <button id="size__chart__btn" class="size__chart__btn">Size Chart</button>
+                    </div>
+                    <div class="size__options">
+                        <button class="size__option">US 7</button>
+                        <button class="size__option">US 8</button>
+                        <button class="size__option active">US 9</button>
+                        <button class="size__option">US 10</button>
+                        <button class="size__option">US 11</button>
+                        <button class="size__option">US 12</button>
+                    </div>
+                </div>
+
+                <!-- size chart pop-up -->
+                <div class="size__chart">
+                    <div class="chart__content">
+                        <span class="close__chart">&times;</span>
+                        <h2 class="chart__title">Size Chart</h2>
+                        <table class="size__chart__table">
+                            <thead>
+                                <tr>
+                                    <th>US Size</th>
+                                    <th>EU Size</th>
+                                    <th>UK Size</th>
+                                    <th>Foot Length (inches)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>7</td>
+                                    <td>40</td>
+                                    <td>6</td>
+                                    <td>9.5"</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>41</td>
+                                    <td>7</td>
+                                    <td>9.75"</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>42</td>
+                                    <td>8</td>
+                                    <td>10.25"</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>43</td>
+                                    <td>9</td>
+                                    <td>10.5"</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>44</td>
+                                    <td>10</td>
+                                    <td>11"</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>45</td>
+                                    <td>11</td>
+                                    <td>11.25"</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>* Measurements are approximate. For best fit, measure your foot from heel
+                            to toe.</p>
+                    </div>
+                </div>
+
+                <!-- Add to Cart -->
+                <div class="add__to__cart__section">
+                    <div class="quantity__selector">
+                        <button class="quantity__btn minus">-</button>
+                        <input type="number" value="1" min="1" class="quantity__input">
+                        <button class="quantity__btn plus">+</button>
+                    </div>
+                    <button class="add__to__cart__btn">Add to Cart</button>
+                </div>
+
+                <!-- Product Meta -->
+                <div class="product__meta">
+                    <div class="meta__item">
+                        <span class="meta__label">SKU:</span>
+                        <span class="meta__value">SNKR-2023-BLK</span>
+                    </div>
+                    <div class="meta__item">
+                        <span class="meta__label">Category:</span>
+                        <span class="meta__value">Sneakers</span>
+                    </div>
+                    <div class="meta__item">
+                        <span class="meta__label">Tags:</span>
+                        <span class="meta__value">Running, Comfort, Premium</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <!-- product tab section -->
+        <section class="product__tabs">
+            <div class="tabs__header">
+                <button class="tab__btn active" data-tab="description">Description</button>
+                <button class="tab__btn" data-tab="information">Product Information</button>
+                <button class="tab__btn" data-tab="shipping">Shipping Details</button>
+            </div>
+            <div class="tabs__content">
+                <div id="description" class="tab__pane active">
+                    <h2>Product Description</h2>
+                    <p class="main__product__description">These premium running sneakers are designed for both performance and style. The upper is made
+                        from breathable mesh material that keeps your feet cool during intense workouts. The cushioned
+                        sole provides excellent shock absorption, reducing impact on your joints.</p>
+                    <!-- <p>Features include:</p>
+                    <ul>
+                        <li>Breathable mesh upper</li>
+                        <li>Responsive cushioning</li>
+                        <li>Durable rubber outsole</li>
+                        <li>Removable insole</li>
+                        <li>Reflective details for night visibility</li>
+                    </ul> -->
+                </div>
+                <div id="information" class="tab__pane">
+                    <h2>Product Information</h2>
+                    <table class="info__table">
+                        <tr>
+                            <th>Material</th>
+                            <td>Mesh, Rubber, EVA foam</td>
+                        </tr>
+                        <tr>
+                            <th>Weight</th>
+                            <td>280g (per shoe)</td>
+                        </tr>
+                        <tr>
+                            <th>Closure</th>
+                            <td>Lace-up</td>
+                        </tr>
+                        <tr>
+                            <th>Heel Height</th>
+                            <td>30mm</td>
+                        </tr>
+                        <tr>
+                            <th>Forefoot Height</th>
+                            <td>20mm</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="shipping" class="tab__pane">
+                    <h2>Shipping Details</h2>
+                    <p>We offer worldwide shipping with the following options:</p>
+                    <ul>
+                        <li><strong>Standard Shipping:</strong> 3-5 business days - $5.99</li>
+                        <li><strong>Express Shipping:</strong> 1-2 business days - $12.99</li>
+                        <li><strong>Free Shipping:</strong> For orders over $100</li>
+                    </ul>
+                    <p>Returns are accepted within 30 days of purchase. Items must be unworn and in original packaging.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="bundle__section">
+            <h2 class="bundle__title">Buy Together And Save</h2>
+            <div class="bundle__container">
+                <div class="bundle__item">
+                    <img src="./assets/performance running snealers.avif" alt="">
+                    <div class="bundel__details">
+                        <h3 class="bundle__product__name">Premium Running Sneakers</h3>
+                        <div class="bundle__price">$129.99</div>
+                    </div>
+                </div>
+                <div class="bundle-plus">+</div>
+                <div class="bundle__item">
+                    <img src="./assets/performance runnning socks.jpg" alt="">
+                    <div class="bundel__details">
+                        <h3 class="bundle__product__name">Performance Running Socks</h3>
+                        <div class="bundle__price">$19.99</div>
+                    </div>
+                </div>
+                <div class="bundle-plus">=</div>
+                <div class="bundle__total">
+                    <div class="price">$139.98</div>
+                    <div class="discount">Save $10</div>
+                    <button class="cart__button">Add Bundle to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="pair__well__section">
+            <h2 class="section-title">Pair Well With</h2>
+            <div class="pair__well__container">
+                <div class="pair__well__items">
+                    <img src="./assets/performance socks.jpg" alt="">
+                    <h3>Perdormance Socks</h3>
+                    <div>$19.99</div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="pair__well__items">
+                    <img src="./assets/comfort insole.webp" alt="">
+                    <h3>Comfort Insole</h3>
+                    <div>$24.99</div>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="pair__well__items">
+                    <img src="./assets/sneaker kit.webp" alt="">
+                    <h3>Sneaker Cleaner kit</h3>
+                    <div>$14.99</div>
+                    <button >Add to Cart</button>
+                </div>
+                <div class="pair__well__items">
+                    <img src="./assets/gym bag.webp" alt="">
+                    <h3>Gym Bag</h3>
+                    <div>$39.99</div>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="related__product">
+            <h2>You May Also Like</h2>
+            <div class="related__container">
+                <div class="related__items">
+                    <div class="product__badge">New</div>
+                    <img src="./assets/casual sneakers.avif" alt="">
+                    <h3>Casual Sneakers</h3>
+                    <div>$99.99</div>
+                </div>
+                <div class="related__items">
+                    <div class="product__badge">Polular</div>
+                    <img src="./assets/trail shoes.jpg" alt="">
+                    <h3>Trail Running Shoes</h3>
+                    <div>$119.99</div>
+
+                </div>
+                <div class="related__items">
+                    <img src="./assets/walking shoes.jpg" alt="">
+                    <h3>Walking Shoes</h3>
+                    <div>$89.99</div>
+                </div>
+                <div class="related__items">
+                    <img src="./assets/basketball shoes.webp" alt="">
+                    <h3>Basketball Shoes</h3>
+                    <div>$139.99</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3 class="footer-title">Shop</h3>
+                <ul class="footer-links">
+                    <li><a href="#">All Products</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Sale</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Help</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">About</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Newsletter</h3>
+                <p class="newsletter-text">Subscribe for updates and exclusive offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2023 ShopifyStore. All rights reserved.</p>
+            <div class="payment-methods">
+                <span class="payment-icon">💳</span>
+                <span class="payment-icon">📱</span>
+                <span class="payment-icon">🏦</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
